@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2017-03-28T16:03:29Z" product-name="bazaar">
+		<header/>
+		<body>
+			<trans-unit id="tx_bazaar_domain_model_paymenttype">
+				<source>Payment Type</source>
+			</trans-unit>
+			<trans-unit id="tx_bazaar_domain_model_paymenttype.title">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="tx_bazaar_domain_model_paymenttype.price">
+				<source>Price</source>
+			</trans-unit>
+			<trans-unit id="tx_bazaar_domain_model_paymenttype.countries">
+				<source>Countries</source>
+			</trans-unit>
+			<trans-unit id="tx_bazaar_domain_model_paymenttype.user_groups">
+				<source>User Groups</source>
+			</trans-unit>
+			<trans-unit id="tx_bazaar_domain_model_paymenttype.tax_rate">
+				<source>Tax Rate</source>
+			</trans-unit>
+			<trans-unit id="tx_bazaar_domain_model_paymenttype.discounts">
+				<source>Discounts</source>
+			</trans-unit>
+			<trans-unit id="tx_bazaar_domain_model_voucher">
+				<source>Voucher</source>
+			</trans-unit>
+			<trans-unit id="tx_bazaar_domain_model_voucher.title">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="tx_bazaar_domain_model_voucher.type">
+				<source>Type</source>
+			</trans-unit>
+			<trans-unit id="tx_bazaar_domain_model_voucher.user_group">
+				<source>User Group</source>
+			</trans-unit>
+			<trans-unit id="tx_bazaar_domain_model_voucher.voucher_code">
+				<source>Voucher Code</source>
+			</trans-unit>
+			<trans-unit id="tx_bazaar_domain_model_voucher.multiple">
+				<source>Multiple</source>
+			</trans-unit>
+			<trans-unit id="tx_bazaar_domain_model_voucher.minimum_cart_value">
+				<source>Minimum Cart Value</source>
+			</trans-unit>
+			<trans-unit id="tx_bazaar_domain_model_voucher.voucher_absolute">
+				<source>Voucher Absolute</source>
+			</trans-unit>
+			<trans-unit id="tx_bazaar_domain_model_voucher.voucher_percent">
+				<source>Voucher Percent</source>
+			</trans-unit>
+			<trans-unit id="tx_bazaar_domain_model_country">
+				<source>Country</source>
+			</trans-unit>
+			<trans-unit id="tx_bazaar_domain_model_country.title">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="tx_bazaar_domain_model_shippingtype">
+				<source>Shipping Type</source>
+			</trans-unit>
+			<trans-unit id="tx_bazaar_domain_model_shippingtype.title">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="tx_bazaar_domain_model_shippingtype.countries">
+				<source>Countries</source>
+			</trans-unit>
+			<trans-unit id="tx_bazaar_domain_model_shippingtype.shipping_costs">
+				<source>Shipping Costs</source>
+			</trans-unit>
+			<trans-unit id="tx_bazaar_domain_model_taxrate">
+				<source>Tax Rate</source>
+			</trans-unit>
+			<trans-unit id="tx_bazaar_domain_model_taxrate.title">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="tx_bazaar_domain_model_taxrate.percent">
+				<source>Percent</source>
+			</trans-unit>
+			<trans-unit id="tx_bazaar_domain_model_discount">
+				<source>Discount</source>
+			</trans-unit>
+			<trans-unit id="tx_bazaar_domain_model_discount.title">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="tx_bazaar_domain_model_discount.payment_target">
+				<source>Payment Target</source>
+			</trans-unit>
+			<trans-unit id="tx_bazaar_domain_model_discount.discount_percent">
+				<source>Discount Percent</source>
+			</trans-unit>
+			<trans-unit id="tx_bazaar_domain_model_shippingcost">
+				<source>Shipping Cost</source>
+			</trans-unit>
+			<trans-unit id="tx_bazaar_domain_model_shippingcost.max_weight">
+				<source>Max Weight</source>
+			</trans-unit>
+			<trans-unit id="tx_bazaar_domain_model_shippingcost.price">
+				<source>Price</source>
+			</trans-unit>
+			<trans-unit id="tx_bazaar_domain_model_shippingcost.tax_rate">
+				<source>Tax Rate</source>
+			</trans-unit>
+			<trans-unit id="tx_bazaar_domain_model_volumediscount">
+				<source>Volume Discount</source>
+			</trans-unit>
+			<trans-unit id="tx_bazaar_domain_model_volumediscount.amount">
+				<source>Amount</source>
+			</trans-unit>
+			<trans-unit id="tx_bazaar_domain_model_volumediscount.price">
+				<source>Price</source>
+			</trans-unit>
+			<trans-unit id="tx_bazaar_domain_model_volumediscount.user_groups">
+				<source>User Groups</source>
+			</trans-unit>
+			<trans-unit id="tx_bazaar_domain_model_product">
+				<source>Product</source>
+			</trans-unit>
+			<trans-unit id="tx_bazaar_domain_model_product.title">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="tx_bazaar_domain_model_product.type">
+				<source>Type</source>
+			</trans-unit>
+			<trans-unit id="tx_bazaar_domain_model_product.page_title">
+				<source>Page Title</source>
+			</trans-unit>
+			<trans-unit id="tx_bazaar_domain_model_product.sub_title">
+				<source>Sub Title</source>
+			</trans-unit>
+			<trans-unit id="tx_bazaar_domain_model_product.product_number">
+				<source>Product Number</source>
+			</trans-unit>
+			<trans-unit id="tx_bazaar_domain_model_product.ean">
+				<source>Ean</source>
+			</trans-unit>
+			<trans-unit id="tx_bazaar_domain_model_product.images">
+				<source>Images</source>
+			</trans-unit>
+			<trans-unit id="tx_bazaar_domain_model_product.price">
+				<source>Price</source>
+			</trans-unit>
+			<trans-unit id="tx_bazaar_domain_model_product.description">
+				<source>Description</source>
+			</trans-unit>
+			<trans-unit id="tx_bazaar_domain_model_product.description1">
+				<source>Description1</source>
+			</trans-unit>
+			<trans-unit id="tx_bazaar_domain_model_product.description2">
+				<source>Description2</source>
+			</trans-unit>
+			<trans-unit id="tx_bazaar_domain_model_product.description3">
+				<source>Description3</source>
+			</trans-unit>
+			<trans-unit id="tx_bazaar_domain_model_product.tax_rate">
+				<source>Tax Rate</source>
+			</trans-unit>
+			<trans-unit id="tx_bazaar_domain_model_product.product_combinations">
+				<source>Product Combinations</source>
+			</trans-unit>
+			<trans-unit id="tx_bazaar_domain_model_product.volume_discounts">
+				<source>Volume Discounts</source>
+			</trans-unit>
+			<trans-unit id="tx_bazaar_domain_model_productcombination">
+				<source>Product Combination</source>
+			</trans-unit>
+			<trans-unit id="tx_bazaar_domain_model_productcombination.amount">
+				<source>Amount</source>
+			</trans-unit>
+			<trans-unit id="tx_bazaar_domain_model_productcombination.product">
+				<source>Product</source>
+			</trans-unit>
+			<trans-unit id="tx_bazaar_domain_model_productrating">
+				<source>Product Rating</source>
+			</trans-unit>
+			<trans-unit id="tx_bazaar_domain_model_productrating.title">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="tx_bazaar_domain_model_productrating.text">
+				<source>Text</source>
+			</trans-unit>
+			<trans-unit id="tx_bazaar_domain_model_productrating.rating">
+				<source>Rating</source>
+			</trans-unit>
+			<trans-unit id="tx_bazaar_domain_model_productrating.user">
+				<source>User</source>
+			</trans-unit>
+			<trans-unit id="tx_bazaar_domain_model_productrating.product">
+				<source>Product</source>
+			</trans-unit>
+			<trans-unit id="tx_bazaar_domain_model_order">
+				<source>Order</source>
+			</trans-unit>
+			<trans-unit id="tx_bazaar_domain_model_order.date">
+				<source>Date</source>
+			</trans-unit>
+			<trans-unit id="tx_bazaar_domain_model_order.user">
+				<source>User</source>
+			</trans-unit>
+			<trans-unit id="tx_bazaar_domain_model_order.billing_address">
+				<source>Billing Address</source>
+			</trans-unit>
+			<trans-unit id="tx_bazaar_domain_model_order.delivery_address">
+				<source>Delivery Address</source>
+			</trans-unit>
+			<trans-unit id="tx_bazaar_domain_model_order.positions">
+				<source>Positions</source>
+			</trans-unit>
+			<trans-unit id="tx_bazaar_domain_model_order.vouchers">
+				<source>Vouchers</source>
+			</trans-unit>
+			<trans-unit id="tx_bazaar_domain_model_order.payment_type">
+				<source>Payment Type</source>
+			</trans-unit>
+			<trans-unit id="tx_bazaar_domain_model_order.shipping_type">
+				<source>Shipping Type</source>
+			</trans-unit>
+			<trans-unit id="tx_bazaar_domain_model_order.shipments">
+				<source>Shipments</source>
+			</trans-unit>
+			<trans-unit id="tx_bazaar_domain_model_order.invoices">
+				<source>Invoices</source>
+			</trans-unit>
+			<trans-unit id="tx_bazaar_domain_model_address">
+				<source>Address</source>
+			</trans-unit>
+			<trans-unit id="tx_bazaar_domain_model_address.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_bazaar_domain_model_address.street">
+				<source>Street</source>
+			</trans-unit>
+			<trans-unit id="tx_bazaar_domain_model_address.street1">
+				<source>Street1</source>
+			</trans-unit>
+			<trans-unit id="tx_bazaar_domain_model_address.city">
+				<source>City</source>
+			</trans-unit>
+			<trans-unit id="tx_bazaar_domain_model_address.region">
+				<source>Region</source>
+			</trans-unit>
+			<trans-unit id="tx_bazaar_domain_model_address.zip">
+				<source>Zip</source>
+			</trans-unit>
+			<trans-unit id="tx_bazaar_domain_model_address.phone">
+				<source>Phone</source>
+			</trans-unit>
+			<trans-unit id="tx_bazaar_domain_model_address.country">
+				<source>Country</source>
+			</trans-unit>
+			<trans-unit id="tx_bazaar_domain_model_address.user">
+				<source>User</source>
+			</trans-unit>
+			<trans-unit id="tx_bazaar_domain_model_position">
+				<source>Position</source>
+			</trans-unit>
+			<trans-unit id="tx_bazaar_domain_model_position.product_title">
+				<source>Product Title</source>
+			</trans-unit>
+			<trans-unit id="tx_bazaar_domain_model_position.description">
+				<source>Description</source>
+			</trans-unit>
+			<trans-unit id="tx_bazaar_domain_model_position.amount">
+				<source>Amount</source>
+			</trans-unit>
+			<trans-unit id="tx_bazaar_domain_model_position.price">
+				<source>Price</source>
+			</trans-unit>
+			<trans-unit id="tx_bazaar_domain_model_position.tax_percent">
+				<source>Tax Percent</source>
+			</trans-unit>
+			<trans-unit id="tx_bazaar_domain_model_position.product">
+				<source>Product</source>
+			</trans-unit>
+			<trans-unit id="tx_bazaar_domain_model_position.tax_rate">
+				<source>Tax Rate</source>
+			</trans-unit>
+			<trans-unit id="tx_bazaar_domain_model_shipment">
+				<source>Shipment</source>
+			</trans-unit>
+			<trans-unit id="tx_bazaar_domain_model_shipment.date">
+				<source>Date</source>
+			</trans-unit>
+			<trans-unit id="tx_bazaar_domain_model_shipment.shipping_id">
+				<source>Shipping Id</source>
+			</trans-unit>
+			<trans-unit id="tx_bazaar_domain_model_shipment.tracking_url">
+				<source>Tracking Url</source>
+			</trans-unit>
+			<trans-unit id="tx_bazaar_domain_model_shipment.description">
+				<source>Description</source>
+			</trans-unit>
+			<trans-unit id="tx_bazaar_domain_model_shipment.internal_comment">
+				<source>Internal Comment</source>
+			</trans-unit>
+			<trans-unit id="tx_bazaar_domain_model_shipment.positions">
+				<source>Positions</source>
+			</trans-unit>
+			<trans-unit id="tx_bazaar_domain_model_invoice">
+				<source>Invoice</source>
+			</trans-unit>
+			<trans-unit id="tx_bazaar_domain_model_invoice.date">
+				<source>Date</source>
+			</trans-unit>
+			<trans-unit id="tx_bazaar_domain_model_invoice.description">
+				<source>Description</source>
+			</trans-unit>
+			<trans-unit id="tx_bazaar_domain_model_invoice.positions">
+				<source>Positions</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

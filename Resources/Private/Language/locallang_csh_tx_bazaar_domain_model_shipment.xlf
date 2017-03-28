@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2017-03-28T16:03:29Z" product-name="bazaar">
+		<header/>
+		<body>
+			<trans-unit id="date.description">
+				<source>date</source>
+			</trans-unit>
+			<trans-unit id="shipping_id.description">
+				<source>shippingId</source>
+			</trans-unit>
+			<trans-unit id="tracking_url.description">
+				<source>trackingUrl</source>
+			</trans-unit>
+			<trans-unit id="description.description">
+				<source>description</source>
+			</trans-unit>
+			<trans-unit id="internal_comment.description">
+				<source>internalComment</source>
+			</trans-unit>
+			<trans-unit id="positions.description">
+				<source>positions</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2017-03-28T15:48:50Z" product-name="bazaar">
+		<header/>
+		<body>
+			<trans-unit id="product_title.description">
+				<source>productTitle</source>
+			</trans-unit>
+			<trans-unit id="description.description">
+				<source>description</source>
+			</trans-unit>
+			<trans-unit id="amount.description">
+				<source>amount</source>
+			</trans-unit>
+			<trans-unit id="price.description">
+				<source>price</source>
+			</trans-unit>
+			<trans-unit id="tax_percent.description">
+				<source>taxPercent</source>
+			</trans-unit>
+			<trans-unit id="product.description">
+				<source>product</source>
+			</trans-unit>
+			<trans-unit id="tax_rate.description">
+				<source>taxRate</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

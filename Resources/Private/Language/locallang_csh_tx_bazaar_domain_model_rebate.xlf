@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2017-03-28T15:48:50Z" product-name="bazaar">
+		<header/>
+		<body>
+			<trans-unit id="title.description">
+				<source>title</source>
+			</trans-unit>
+			<trans-unit id="type.description">
+				<source>type</source>
+			</trans-unit>
+			<trans-unit id="user_group.description">
+				<source>userGroup</source>
+			</trans-unit>
+			<trans-unit id="voucher_code.description">
+				<source>voucherCode</source>
+			</trans-unit>
+			<trans-unit id="multiple.description">
+				<source>multiple</source>
+			</trans-unit>
+			<trans-unit id="minimum_cart_value.description">
+				<source>minimumCartValue</source>
+			</trans-unit>
+			<trans-unit id="voucher_absolute.description">
+				<source>voucherAbsolute</source>
+			</trans-unit>
+			<trans-unit id="voucher_percent.description">
+				<source>voucherPercent</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>
