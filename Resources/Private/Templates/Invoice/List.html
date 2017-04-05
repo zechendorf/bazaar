@@ -4,18 +4,23 @@
       <th>#</th>
       <th>Date</th>
       <th>Recipient</th>
+      <th>Sum</th>
       <th>Action</th>
     </tr>
   </thead>
   <tbody>
     <f:for each="{invoices}" as="invoice">
       <tr>
-        <td>{invoice.uid}</td>
+        <td><f:link.action action="show" arguments="{invoice:invoice}">{invoice.uid}</f:link.action></td>
         <td><f:format.date format="{settings.date_format}">{invoice.date}</f:format.date></td>
         <td><f:format.nl2br>{invoice.txOrder.invoiceAddress}</f:format.nl2br></td>
-        <td>{invoice.sum} Show</td>
+        <td><f:format.number 
+          decimals="{settings.format_money_decimals}" 
+          decimalSeparator="{settings.format_money_decimal_seperator}" 
+          thousandsSeparator="{settings.format_money_thousands_seperator}">{invoice.sum}</f:format.number> {settings.format_money_currency}</td>
+        <td>Show</td>
       </tr>
     </f:for>
   </tbody>
 </table>
-<f:debug>{invoices}</f:debug>
+<f:debug>{settings}</f:debug>

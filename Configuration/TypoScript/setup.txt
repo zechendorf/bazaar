@@ -2,5 +2,9 @@ plugin.tx_bazaar{
   settings{
     admin_usergroup = {$plugin.tx_bazaar.settings.admin_usergroup}
     date_format = {$plugin.tx_bazaar.settings.date_format}
+    format_money_decimals = 2
+    format_money_decimal_seperator = ,
+    format_money_thousands_seperator = .
+    format_money_currency = €
   }
 }
