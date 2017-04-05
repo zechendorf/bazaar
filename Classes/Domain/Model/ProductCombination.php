@@ -40,11 +40,11 @@ class ProductCombination extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     protected $amount = 0;
     
     /**
-     * product
+     * combinationProduct
      *
      * @var \ZECHENDORF\Bazaar\Domain\Model\Product
      */
-    protected $product = null;
+    protected $combinationProduct = null;
     
     /**
      * Returns the amount
@@ -68,24 +68,24 @@ class ProductCombination extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     }
     
     /**
-     * Returns the product
+     * Returns the combinationProduct
      *
-     * @return \ZECHENDORF\Bazaar\Domain\Model\Product $product
+     * @return \ZECHENDORF\Bazaar\Domain\Model\Product combinationProduct
      */
-    public function getProduct()
+    public function getCombinationProduct()
     {
-        return $this->product;
+        return $this->combinationProduct;
     }
     
     /**
-     * Sets the product
+     * Sets the combinationProduct
      *
-     * @param \ZECHENDORF\Bazaar\Domain\Model\Product $product
+     * @param \ZECHENDORF\Bazaar\Domain\Model\Product $combinationProduct
      * @return void
      */
-    public function setProduct(\ZECHENDORF\Bazaar\Domain\Model\Product $product)
+    public function setCombinationProduct(\ZECHENDORF\Bazaar\Domain\Model\Product $combinationProduct)
     {
-        $this->product = $product;
+        $this->combinationProduct = $combinationProduct;
     }
 
 }

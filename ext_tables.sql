@@ -399,7 +399,7 @@ CREATE TABLE tx_bazaar_domain_model_productcombination (
 	product int(11) unsigned DEFAULT '0' NOT NULL,
 
 	amount int(11) DEFAULT '0' NOT NULL,
-	product int(11) unsigned DEFAULT '0',
+	combination_product int(11) unsigned DEFAULT '0',
 
 	tstamp int(11) unsigned DEFAULT '0' NOT NULL,
 	crdate int(11) unsigned DEFAULT '0' NOT NULL,

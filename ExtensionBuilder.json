@@ -808,8 +808,8 @@
         {
             "config": {
                 "position": [
-                    94,
-                    773
+                    79,
+                    771
                 ]
             },
             "name": "New Model Object",
@@ -857,7 +857,7 @@
                             "lazyLoading": false,
                             "propertyIsExcludeField": true,
                             "relationDescription": "",
-                            "relationName": "product",
+                            "relationName": "combinationProduct",
                             "relationType": "manyToOne",
                             "relationWire": "[wired]",
                             "uid": "1028822095128"
@@ -2102,7 +2102,7 @@
         }
     ],
     "log": {
-        "last_modified": "2017-04-05 03:20",
+        "last_modified": "2017-04-05 03:25",
         "extension_builder_version": "7.6.0",
         "be_user": " (1)"
     }

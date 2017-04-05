@@ -66,25 +66,25 @@ class ProductCombinationTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
 	/**
 	 * @test
 	 */
-	public function getProductReturnsInitialValueForProduct()
+	public function getCombinationProductReturnsInitialValueForProduct()
 	{
 		$this->assertEquals(
 			NULL,
-			$this->subject->getProduct()
+			$this->subject->getCombinationProduct()
 		);
 	}
 
 	/**
 	 * @test
 	 */
-	public function setProductForProductSetsProduct()
+	public function setCombinationProductForProductSetsCombinationProduct()
 	{
-		$productFixture = new \ZECHENDORF\Bazaar\Domain\Model\Product();
-		$this->subject->setProduct($productFixture);
+		$combinationProductFixture = new \ZECHENDORF\Bazaar\Domain\Model\Product();
+		$this->subject->setCombinationProduct($combinationProductFixture);
 
 		$this->assertAttributeEquals(
-			$productFixture,
-			'product',
+			$combinationProductFixture,
+			'combinationProduct',
 			$this->subject
 		);
 	}
