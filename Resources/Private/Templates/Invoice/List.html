@@ -1,1 +1,20 @@
-<f:debug>{invoices}</f:debug>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Date</th>
+      <th>Recipient</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <f:for each="{invoices}" as="invoice">
+      <tr>
+        <td>{invoice.uid}</td>
+        <td><f:format.date format="{settings.date_format}">{invoice.date}</f:format.date></td>
+        <td>{invoice.order.invoiceAddress}</td>
+        <td>Show</td>
+      </tr>
+    </f:for>
+  </tbody>
+</table>

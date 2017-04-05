@@ -1,5 +1,6 @@
 plugin.tx_bazaar{
   settings{
     admin_usergroup = 
+    date_format = %Y-%m-%d
   }
 }

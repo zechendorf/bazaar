@@ -55,6 +55,7 @@ class InvoiceController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
       
     }
     
+    $this->view->assign('settings',$this->settings);
     $this->view->assign('invoices', $invoices);
   }
 
