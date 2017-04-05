@@ -55,6 +55,14 @@ class Invoice extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     protected $positions = null;
     
     /**
+     * payments
+     *
+     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\ZECHENDORF\Bazaar\Domain\Model\Payment>
+     * @cascade remove
+     */
+    protected $payments = null;
+    
+    /**
      * __construct
      */
     public function __construct()
@@ -74,6 +82,7 @@ class Invoice extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     protected function initStorageObjects()
     {
         $this->positions = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+        $this->payments = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
     }
     
     /**
@@ -159,6 +168,49 @@ class Invoice extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     public function setDescription($description)
     {
         $this->description = $description;
+    }
+    
+    /**
+     * Adds a Payment
+     *
+     * @param \ZECHENDORF\Bazaar\Domain\Model\Payment $payment
+     * @return void
+     */
+    public function addPayment(\ZECHENDORF\Bazaar\Domain\Model\Payment $payment)
+    {
+        $this->payments->attach($payment);
+    }
+    
+    /**
+     * Removes a Payment
+     *
+     * @param \ZECHENDORF\Bazaar\Domain\Model\Payment $paymentToRemove The Payment to be removed
+     * @return void
+     */
+    public function removePayment(\ZECHENDORF\Bazaar\Domain\Model\Payment $paymentToRemove)
+    {
+        $this->payments->detach($paymentToRemove);
+    }
+    
+    /**
+     * Returns the payments
+     *
+     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\ZECHENDORF\Bazaar\Domain\Model\Payment> $payments
+     */
+    public function getPayments()
+    {
+        return $this->payments;
+    }
+    
+    /**
+     * Sets the payments
+     *
+     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\ZECHENDORF\Bazaar\Domain\Model\Payment> $payments
+     * @return void
+     */
+    public function setPayments(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $payments)
+    {
+        $this->payments = $payments;
     }
 
 }

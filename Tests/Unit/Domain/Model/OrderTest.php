@@ -80,6 +80,56 @@ class OrderTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
 	/**
 	 * @test
 	 */
+	public function getInvoiceAddressReturnsInitialValueForString()
+	{
+		$this->assertSame(
+			'',
+			$this->subject->getInvoiceAddress()
+		);
+	}
+
+	/**
+	 * @test
+	 */
+	public function setInvoiceAddressForStringSetsInvoiceAddress()
+	{
+		$this->subject->setInvoiceAddress('Conceived at T3CON10');
+
+		$this->assertAttributeEquals(
+			'Conceived at T3CON10',
+			'invoiceAddress',
+			$this->subject
+		);
+	}
+
+	/**
+	 * @test
+	 */
+	public function getDeliveryAddressReturnsInitialValueForString()
+	{
+		$this->assertSame(
+			'',
+			$this->subject->getDeliveryAddress()
+		);
+	}
+
+	/**
+	 * @test
+	 */
+	public function setDeliveryAddressForStringSetsDeliveryAddress()
+	{
+		$this->subject->setDeliveryAddress('Conceived at T3CON10');
+
+		$this->assertAttributeEquals(
+			'Conceived at T3CON10',
+			'deliveryAddress',
+			$this->subject
+		);
+	}
+
+	/**
+	 * @test
+	 */
 	public function getUserReturnsInitialValueForFrontendUser()
 	{	}
 
@@ -92,25 +142,25 @@ class OrderTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
 	/**
 	 * @test
 	 */
-	public function getBillingAddressReturnsInitialValueForAddress()
+	public function getBillingAddressTextReturnsInitialValueForAddress()
 	{
 		$this->assertEquals(
 			NULL,
-			$this->subject->getBillingAddress()
+			$this->subject->getBillingAddressText()
 		);
 	}
 
 	/**
 	 * @test
 	 */
-	public function setBillingAddressForAddressSetsBillingAddress()
+	public function setBillingAddressTextForAddressSetsBillingAddressText()
 	{
-		$billingAddressFixture = new \ZECHENDORF\Bazaar\Domain\Model\Address();
-		$this->subject->setBillingAddress($billingAddressFixture);
+		$billingAddressTextFixture = new \ZECHENDORF\Bazaar\Domain\Model\Address();
+		$this->subject->setBillingAddressText($billingAddressTextFixture);
 
 		$this->assertAttributeEquals(
-			$billingAddressFixture,
-			'billingAddress',
+			$billingAddressTextFixture,
+			'billingAddressText',
 			$this->subject
 		);
 	}
@@ -118,25 +168,25 @@ class OrderTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
 	/**
 	 * @test
 	 */
-	public function getDeliveryAddressReturnsInitialValueForAddress()
+	public function getDeliveryAddressTextReturnsInitialValueForAddress()
 	{
 		$this->assertEquals(
 			NULL,
-			$this->subject->getDeliveryAddress()
+			$this->subject->getDeliveryAddressText()
 		);
 	}
 
 	/**
 	 * @test
 	 */
-	public function setDeliveryAddressForAddressSetsDeliveryAddress()
+	public function setDeliveryAddressTextForAddressSetsDeliveryAddressText()
 	{
-		$deliveryAddressFixture = new \ZECHENDORF\Bazaar\Domain\Model\Address();
-		$this->subject->setDeliveryAddress($deliveryAddressFixture);
+		$deliveryAddressTextFixture = new \ZECHENDORF\Bazaar\Domain\Model\Address();
+		$this->subject->setDeliveryAddressText($deliveryAddressTextFixture);
 
 		$this->assertAttributeEquals(
-			$deliveryAddressFixture,
-			'deliveryAddress',
+			$deliveryAddressTextFixture,
+			'deliveryAddressText',
 			$this->subject
 		);
 	}

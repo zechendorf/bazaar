@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2017-04-05T15:20:44Z" product-name="bazaar">
+		<header/>
+		<body>
+			<trans-unit id="transaction_date.description">
+				<source>transactionDate</source>
+			</trans-unit>
+			<trans-unit id="valuta_date.description">
+				<source>valutaDate</source>
+			</trans-unit>
+			<trans-unit id="debit.description">
+				<source>debit</source>
+			</trans-unit>
+			<trans-unit id="credit.description">
+				<source>credit</source>
+			</trans-unit>
+			<trans-unit id="description.description">
+				<source>description</source>
+			</trans-unit>
+			<trans-unit id="transaction_id.description">
+				<source>transactionId</source>
+			</trans-unit>
+			<trans-unit id="sender.description">
+				<source>sender</source>
+			</trans-unit>
+			<trans-unit id="recipient.description">
+				<source>recipient</source>
+			</trans-unit>
+			<trans-unit id="identifier.description">
+				<source>identifier</source>
+			</trans-unit>
+			<trans-unit id="payment_type.description">
+				<source>paymentType</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

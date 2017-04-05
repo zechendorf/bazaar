@@ -1,8 +1,8 @@
 <?php
 return array(
 	'ctrl' => array(
-		'title'	=> 'LLL:EXT:bazaar/Resources/Private/Language/locallang_db.xlf:tx_bazaar_domain_model_invoice',
-		'label' => 'date',
+		'title'	=> 'LLL:EXT:bazaar/Resources/Private/Language/locallang_db.xlf:tx_bazaar_domain_model_payment',
+		'label' => 'amount',
 		'tstamp' => 'tstamp',
 		'crdate' => 'crdate',
 		'cruser_id' => 'cruser_id',
@@ -19,14 +19,14 @@ return array(
 			'starttime' => 'starttime',
 			'endtime' => 'endtime',
 		),
-		'searchFields' => 'date,description,positions,payments,',
-		'iconfile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath('bazaar') . 'Resources/Public/Icons/tx_bazaar_domain_model_invoice.gif'
+		'searchFields' => 'amount,transaction,',
+		'iconfile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath('bazaar') . 'Resources/Public/Icons/tx_bazaar_domain_model_payment.gif'
 	),
 	'interface' => array(
-		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, date, description, positions, payments',
+		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, amount, transaction',
 	),
 	'types' => array(
-		'1' => array('showitem' => 'sys_language_uid;;;;1-1-1, l10n_parent, l10n_diffsource, hidden;;1, date, description, positions, payments, --div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.access, starttime, endtime'),
+		'1' => array('showitem' => 'sys_language_uid;;;;1-1-1, l10n_parent, l10n_diffsource, hidden;;1, amount, transaction, --div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.access, starttime, endtime'),
 	),
 	'palettes' => array(
 		'1' => array('showitem' => ''),
@@ -57,8 +57,8 @@ return array(
 				'items' => array(
 					array('', 0),
 				),
-				'foreign_table' => 'tx_bazaar_domain_model_invoice',
-				'foreign_table_where' => 'AND tx_bazaar_domain_model_invoice.pid=###CURRENT_PID### AND tx_bazaar_domain_model_invoice.sys_language_uid IN (-1,0)',
+				'foreign_table' => 'tx_bazaar_domain_model_payment',
+				'foreign_table_where' => 'AND tx_bazaar_domain_model_payment.pid=###CURRENT_PID### AND tx_bazaar_domain_model_payment.sys_language_uid IN (-1,0)',
 			),
 		),
 		'l10n_diffsource' => array(
@@ -116,66 +116,28 @@ return array(
 			),
 		),
 
-		'date' => array(
+		'amount' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:bazaar/Resources/Private/Language/locallang_db.xlf:tx_bazaar_domain_model_invoice.date',
+			'label' => 'LLL:EXT:bazaar/Resources/Private/Language/locallang_db.xlf:tx_bazaar_domain_model_payment.amount',
 			'config' => array(
-				'dbType' => 'datetime',
 				'type' => 'input',
-				'size' => 12,
-				'eval' => 'datetime',
-				'checkbox' => 0,
-				'default' => '0000-00-00 00:00:00'
-			),
-		),
-		'description' => array(
-			'exclude' => 1,
-			'label' => 'LLL:EXT:bazaar/Resources/Private/Language/locallang_db.xlf:tx_bazaar_domain_model_invoice.description',
-			'config' => array(
-				'type' => 'text',
-				'cols' => 40,
-				'rows' => 15,
-				'eval' => 'trim'
+				'size' => 30,
+				'eval' => 'double2'
 			)
 		),
-		'positions' => array(
+		'transaction' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:bazaar/Resources/Private/Language/locallang_db.xlf:tx_bazaar_domain_model_invoice.positions',
+			'label' => 'LLL:EXT:bazaar/Resources/Private/Language/locallang_db.xlf:tx_bazaar_domain_model_payment.transaction',
 			'config' => array(
-				'type' => 'inline',
-				'foreign_table' => 'tx_bazaar_domain_model_position',
-				'foreign_field' => 'invoice',
-				'maxitems' => 9999,
-				'appearance' => array(
-					'collapseAll' => 0,
-					'levelLinksPosition' => 'top',
-					'showSynchronizationLink' => 1,
-					'showPossibleLocalizationRecords' => 1,
-					'showAllLocalizationLink' => 1
-				),
+				'type' => 'select',
+				'renderType' => 'selectSingle',
+				'foreign_table' => 'tx_bazaar_domain_model_transactions',
+				'minitems' => 0,
+				'maxitems' => 1,
 			),
-
-		),
-		'payments' => array(
-			'exclude' => 1,
-			'label' => 'LLL:EXT:bazaar/Resources/Private/Language/locallang_db.xlf:tx_bazaar_domain_model_invoice.payments',
-			'config' => array(
-				'type' => 'inline',
-				'foreign_table' => 'tx_bazaar_domain_model_payment',
-				'foreign_field' => 'invoice',
-				'maxitems' => 9999,
-				'appearance' => array(
-					'collapseAll' => 0,
-					'levelLinksPosition' => 'top',
-					'showSynchronizationLink' => 1,
-					'showPossibleLocalizationRecords' => 1,
-					'showAllLocalizationLink' => 1
-				),
-			),
-
 		),
 		
-		'tx_order' => array(
+		'invoice' => array(
 			'config' => array(
 				'type' => 'passthrough',
 			),

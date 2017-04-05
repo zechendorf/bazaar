@@ -19,14 +19,14 @@ return array(
 			'starttime' => 'starttime',
 			'endtime' => 'endtime',
 		),
-		'searchFields' => 'date,user,billing_address,delivery_address,positions,vouchers,payment_type,shipping_type,shipments,invoices,',
+		'searchFields' => 'date,invoice_address,delivery_address,user,billing_address_text,delivery_address_text,positions,vouchers,payment_type,shipping_type,shipments,invoices,',
 		'iconfile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath('bazaar') . 'Resources/Public/Icons/tx_bazaar_domain_model_order.gif'
 	),
 	'interface' => array(
-		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, date, user, billing_address, delivery_address, positions, vouchers, payment_type, shipping_type, shipments, invoices',
+		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, date, invoice_address, delivery_address, user, billing_address_text, delivery_address_text, positions, vouchers, payment_type, shipping_type, shipments, invoices',
 	),
 	'types' => array(
-		'1' => array('showitem' => 'sys_language_uid;;;;1-1-1, l10n_parent, l10n_diffsource, hidden;;1, date, user, billing_address, delivery_address, positions, vouchers, payment_type, shipping_type, shipments, invoices, --div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.access, starttime, endtime'),
+		'1' => array('showitem' => 'sys_language_uid;;;;1-1-1, l10n_parent, l10n_diffsource, hidden;;1, date, invoice_address, delivery_address, user, billing_address_text, delivery_address_text, positions, vouchers, payment_type, shipping_type, shipments, invoices, --div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.access, starttime, endtime'),
 	),
 	'palettes' => array(
 		'1' => array('showitem' => ''),
@@ -128,6 +128,26 @@ return array(
 				'default' => '0000-00-00 00:00:00'
 			),
 		),
+		'invoice_address' => array(
+			'exclude' => 1,
+			'label' => 'LLL:EXT:bazaar/Resources/Private/Language/locallang_db.xlf:tx_bazaar_domain_model_order.invoice_address',
+			'config' => array(
+				'type' => 'text',
+				'cols' => 40,
+				'rows' => 15,
+				'eval' => 'trim'
+			)
+		),
+		'delivery_address' => array(
+			'exclude' => 1,
+			'label' => 'LLL:EXT:bazaar/Resources/Private/Language/locallang_db.xlf:tx_bazaar_domain_model_order.delivery_address',
+			'config' => array(
+				'type' => 'text',
+				'cols' => 40,
+				'rows' => 15,
+				'eval' => 'trim'
+			)
+		),
 		'user' => array(
 			'exclude' => 1,
 			'label' => 'LLL:EXT:bazaar/Resources/Private/Language/locallang_db.xlf:tx_bazaar_domain_model_order.user',
@@ -139,9 +159,9 @@ return array(
 				'maxitems' => 1,
 			),
 		),
-		'billing_address' => array(
+		'billing_address_text' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:bazaar/Resources/Private/Language/locallang_db.xlf:tx_bazaar_domain_model_order.billing_address',
+			'label' => 'LLL:EXT:bazaar/Resources/Private/Language/locallang_db.xlf:tx_bazaar_domain_model_order.billing_address_text',
 			'config' => array(
 				'type' => 'select',
 				'renderType' => 'selectSingle',
@@ -150,9 +170,9 @@ return array(
 				'maxitems' => 1,
 			),
 		),
-		'delivery_address' => array(
+		'delivery_address_text' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:bazaar/Resources/Private/Language/locallang_db.xlf:tx_bazaar_domain_model_order.delivery_address',
+			'label' => 'LLL:EXT:bazaar/Resources/Private/Language/locallang_db.xlf:tx_bazaar_domain_model_order.delivery_address_text',
 			'config' => array(
 				'type' => 'select',
 				'renderType' => 'selectSingle',

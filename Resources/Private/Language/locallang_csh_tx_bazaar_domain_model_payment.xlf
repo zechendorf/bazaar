@@ -6,8 +6,8 @@
 			<trans-unit id="amount.description">
 				<source>amount</source>
 			</trans-unit>
-			<trans-unit id="product.description">
-				<source>product</source>
+			<trans-unit id="transaction.description">
+				<source>transaction</source>
 			</trans-unit>
 		</body>
 	</file>

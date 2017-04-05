@@ -157,4 +157,60 @@ class InvoiceTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
 		$this->subject->removePosition($position);
 
 	}
+
+	/**
+	 * @test
+	 */
+	public function getPaymentsReturnsInitialValueForPayment()
+	{
+		$newObjectStorage = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+		$this->assertEquals(
+			$newObjectStorage,
+			$this->subject->getPayments()
+		);
+	}
+
+	/**
+	 * @test
+	 */
+	public function setPaymentsForObjectStorageContainingPaymentSetsPayments()
+	{
+		$payment = new \ZECHENDORF\Bazaar\Domain\Model\Payment();
+		$objectStorageHoldingExactlyOnePayments = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+		$objectStorageHoldingExactlyOnePayments->attach($payment);
+		$this->subject->setPayments($objectStorageHoldingExactlyOnePayments);
+
+		$this->assertAttributeEquals(
+			$objectStorageHoldingExactlyOnePayments,
+			'payments',
+			$this->subject
+		);
+	}
+
+	/**
+	 * @test
+	 */
+	public function addPaymentToObjectStorageHoldingPayments()
+	{
+		$payment = new \ZECHENDORF\Bazaar\Domain\Model\Payment();
+		$paymentsObjectStorageMock = $this->getMock('TYPO3\\CMS\\Extbase\\Persistence\\ObjectStorage', array('attach'), array(), '', FALSE);
+		$paymentsObjectStorageMock->expects($this->once())->method('attach')->with($this->equalTo($payment));
+		$this->inject($this->subject, 'payments', $paymentsObjectStorageMock);
+
+		$this->subject->addPayment($payment);
+	}
+
+	/**
+	 * @test
+	 */
+	public function removePaymentFromObjectStorageHoldingPayments()
+	{
+		$payment = new \ZECHENDORF\Bazaar\Domain\Model\Payment();
+		$paymentsObjectStorageMock = $this->getMock('TYPO3\\CMS\\Extbase\\Persistence\\ObjectStorage', array('detach'), array(), '', FALSE);
+		$paymentsObjectStorageMock->expects($this->once())->method('detach')->with($this->equalTo($payment));
+		$this->inject($this->subject, 'payments', $paymentsObjectStorageMock);
+
+		$this->subject->removePayment($payment);
+
+	}
 }

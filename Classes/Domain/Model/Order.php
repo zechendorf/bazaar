@@ -40,6 +40,20 @@ class Order extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     protected $date = null;
     
     /**
+     * invoiceAddress
+     *
+     * @var string
+     */
+    protected $invoiceAddress = '';
+    
+    /**
+     * deliveryAddress
+     *
+     * @var string
+     */
+    protected $deliveryAddress = '';
+    
+    /**
      * user
      *
      * @var \TYPO3\CMS\Extbase\Domain\Model\FrontendUser
@@ -48,20 +62,20 @@ class Order extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     protected $user = null;
     
     /**
-     * billingAddress
+     * billingAddressText
      *
      * @var \ZECHENDORF\Bazaar\Domain\Model\Address
      * @lazy
      */
-    protected $billingAddress = null;
+    protected $billingAddressText = null;
     
     /**
-     * deliveryAddress
+     * deliveryAddressText
      *
      * @var \ZECHENDORF\Bazaar\Domain\Model\Address
      * @lazy
      */
-    protected $deliveryAddress = null;
+    protected $deliveryAddressText = null;
     
     /**
      * positions
@@ -153,48 +167,6 @@ class Order extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     public function setUser(\TYPO3\CMS\Extbase\Domain\Model\FrontendUser $user)
     {
         $this->user = $user;
-    }
-    
-    /**
-     * Returns the billingAddress
-     *
-     * @return \ZECHENDORF\Bazaar\Domain\Model\Address $billingAddress
-     */
-    public function getBillingAddress()
-    {
-        return $this->billingAddress;
-    }
-    
-    /**
-     * Sets the billingAddress
-     *
-     * @param \ZECHENDORF\Bazaar\Domain\Model\Address $billingAddress
-     * @return void
-     */
-    public function setBillingAddress(\ZECHENDORF\Bazaar\Domain\Model\Address $billingAddress)
-    {
-        $this->billingAddress = $billingAddress;
-    }
-    
-    /**
-     * Returns the deliveryAddress
-     *
-     * @return \ZECHENDORF\Bazaar\Domain\Model\Address $deliveryAddress
-     */
-    public function getDeliveryAddress()
-    {
-        return $this->deliveryAddress;
-    }
-    
-    /**
-     * Sets the deliveryAddress
-     *
-     * @param \ZECHENDORF\Bazaar\Domain\Model\Address $deliveryAddress
-     * @return void
-     */
-    public function setDeliveryAddress(\ZECHENDORF\Bazaar\Domain\Model\Address $deliveryAddress)
-    {
-        $this->deliveryAddress = $deliveryAddress;
     }
     
     /**
@@ -434,6 +406,90 @@ class Order extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     public function setInvoices(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $invoices)
     {
         $this->invoices = $invoices;
+    }
+    
+    /**
+     * Returns the billingAddressText
+     *
+     * @return \ZECHENDORF\Bazaar\Domain\Model\Address billingAddressText
+     */
+    public function getBillingAddressText()
+    {
+        return $this->billingAddressText;
+    }
+    
+    /**
+     * Sets the billingAddressText
+     *
+     * @param \ZECHENDORF\Bazaar\Domain\Model\Address $billingAddressText
+     * @return void
+     */
+    public function setBillingAddressText(\ZECHENDORF\Bazaar\Domain\Model\Address $billingAddressText)
+    {
+        $this->billingAddressText = $billingAddressText;
+    }
+    
+    /**
+     * Returns the deliveryAddressText
+     *
+     * @return \ZECHENDORF\Bazaar\Domain\Model\Address deliveryAddressText
+     */
+    public function getDeliveryAddressText()
+    {
+        return $this->deliveryAddressText;
+    }
+    
+    /**
+     * Sets the deliveryAddressText
+     *
+     * @param \ZECHENDORF\Bazaar\Domain\Model\Address $deliveryAddressText
+     * @return void
+     */
+    public function setDeliveryAddressText(\ZECHENDORF\Bazaar\Domain\Model\Address $deliveryAddressText)
+    {
+        $this->deliveryAddressText = $deliveryAddressText;
+    }
+    
+    /**
+     * Returns the invoiceAddress
+     *
+     * @return string $invoiceAddress
+     */
+    public function getInvoiceAddress()
+    {
+        return $this->invoiceAddress;
+    }
+    
+    /**
+     * Sets the invoiceAddress
+     *
+     * @param string $invoiceAddress
+     * @return void
+     */
+    public function setInvoiceAddress($invoiceAddress)
+    {
+        $this->invoiceAddress = $invoiceAddress;
+    }
+    
+    /**
+     * Returns the deliveryAddress
+     *
+     * @return string $deliveryAddress
+     */
+    public function getDeliveryAddress()
+    {
+        return $this->deliveryAddress;
+    }
+    
+    /**
+     * Sets the deliveryAddress
+     *
+     * @param string $deliveryAddress
+     * @return void
+     */
+    public function setDeliveryAddress($deliveryAddress)
+    {
+        $this->deliveryAddress = $deliveryAddress;
     }
 
 }

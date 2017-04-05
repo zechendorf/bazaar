@@ -999,6 +999,26 @@
                             "propertyName": "date",
                             "propertyType": "NativeDateTime",
                             "uid": "83411096708"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "invoiceAddress",
+                            "propertyType": "Text",
+                            "uid": "502435224112"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "deliveryAddress",
+                            "propertyType": "Text",
+                            "uid": "1142943853071"
                         }
                     ]
                 },
@@ -1019,7 +1039,7 @@
                             "lazyLoading": true,
                             "propertyIsExcludeField": true,
                             "relationDescription": "",
-                            "relationName": "billingAddress",
+                            "relationName": "billingAddressText",
                             "relationType": "manyToOne",
                             "relationWire": "[wired]",
                             "uid": "1091379766936"
@@ -1029,7 +1049,7 @@
                             "lazyLoading": true,
                             "propertyIsExcludeField": true,
                             "relationDescription": "",
-                            "relationName": "deliveryAddress",
+                            "relationName": "deliveryAddressText",
                             "relationType": "manyToOne",
                             "relationWire": "[wired]",
                             "uid": "1208315470285"
@@ -1507,6 +1527,218 @@
                             "relationType": "zeroToMany",
                             "relationWire": "[wired]",
                             "uid": "1434259041326"
+                        },
+                        {
+                            "foreignRelationClass": "",
+                            "lazyLoading": false,
+                            "propertyIsExcludeField": true,
+                            "relationDescription": "",
+                            "relationName": "payments",
+                            "relationType": "zeroToMany",
+                            "relationWire": "[wired]",
+                            "uid": "215373669416"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "config": {
+                "position": [
+                    966,
+                    79
+                ]
+            },
+            "name": "New Model Object",
+            "value": {
+                "actionGroup": {
+                    "_default0_list": false,
+                    "_default1_show": false,
+                    "_default2_new_create": false,
+                    "_default3_edit_update": false,
+                    "_default4_delete": false,
+                    "customActions": []
+                },
+                "name": "Transactions",
+                "objectsettings": {
+                    "addDeletedField": true,
+                    "addHiddenField": true,
+                    "addStarttimeEndtimeFields": true,
+                    "aggregateRoot": false,
+                    "categorizable": false,
+                    "description": "",
+                    "mapToTable": "",
+                    "parentClass": "",
+                    "sorting": false,
+                    "type": "Entity",
+                    "uid": "904380180027"
+                },
+                "propertyGroup": {
+                    "properties": [
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "transactionDate",
+                            "propertyType": "NativeDateTime",
+                            "uid": "511812442086"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "valutaDate",
+                            "propertyType": "DateTime",
+                            "uid": "1221665571291"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "debit",
+                            "propertyType": "Float",
+                            "uid": "774211399632"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "credit",
+                            "propertyType": "Float",
+                            "uid": "949375820283"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "description",
+                            "propertyType": "Text",
+                            "uid": "956644021012"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "transactionId",
+                            "propertyType": "String",
+                            "uid": "928246165237"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "sender",
+                            "propertyType": "String",
+                            "uid": "620490581984"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "recipient",
+                            "propertyType": "String",
+                            "uid": "40649876099"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "identifier",
+                            "propertyType": "String",
+                            "uid": "463975807746"
+                        }
+                    ]
+                },
+                "relationGroup": {
+                    "relations": [
+                        {
+                            "foreignRelationClass": "",
+                            "lazyLoading": false,
+                            "propertyIsExcludeField": true,
+                            "relationDescription": "",
+                            "relationName": "paymentType",
+                            "relationType": "manyToOne",
+                            "relationWire": "[wired]",
+                            "uid": "58794574458"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "config": {
+                "position": [
+                    1305,
+                    213
+                ]
+            },
+            "name": "New Model Object",
+            "value": {
+                "actionGroup": {
+                    "_default0_list": false,
+                    "_default1_show": false,
+                    "_default2_new_create": false,
+                    "_default3_edit_update": false,
+                    "_default4_delete": false,
+                    "customActions": []
+                },
+                "name": "Payment",
+                "objectsettings": {
+                    "addDeletedField": true,
+                    "addHiddenField": true,
+                    "addStarttimeEndtimeFields": true,
+                    "aggregateRoot": true,
+                    "categorizable": false,
+                    "description": "",
+                    "mapToTable": "",
+                    "parentClass": "",
+                    "sorting": false,
+                    "type": "Entity",
+                    "uid": "783500710591"
+                },
+                "propertyGroup": {
+                    "properties": [
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "amount",
+                            "propertyType": "Float",
+                            "uid": "785556605167"
+                        }
+                    ]
+                },
+                "relationGroup": {
+                    "relations": [
+                        {
+                            "foreignRelationClass": "",
+                            "lazyLoading": false,
+                            "propertyIsExcludeField": true,
+                            "relationDescription": "",
+                            "relationName": "transaction",
+                            "relationType": "manyToOne",
+                            "relationWire": "[wired]",
+                            "uid": "1071417262443"
                         }
                     ]
                 }
@@ -1831,10 +2063,46 @@
                 "terminal": "SOURCES",
                 "uid": "661737748688"
             }
+        },
+        {
+            "src": {
+                "moduleId": 16,
+                "terminal": "relationWire_0",
+                "uid": "58794574458"
+            },
+            "tgt": {
+                "moduleId": 0,
+                "terminal": "SOURCES",
+                "uid": "1291350630265"
+            }
+        },
+        {
+            "src": {
+                "moduleId": 17,
+                "terminal": "relationWire_0",
+                "uid": "1071417262443"
+            },
+            "tgt": {
+                "moduleId": 16,
+                "terminal": "SOURCES",
+                "uid": "904380180027"
+            }
+        },
+        {
+            "src": {
+                "moduleId": 15,
+                "terminal": "relationWire_1",
+                "uid": "215373669416"
+            },
+            "tgt": {
+                "moduleId": 17,
+                "terminal": "SOURCES",
+                "uid": "783500710591"
+            }
         }
     ],
     "log": {
-        "last_modified": "2017-03-28 04:03",
+        "last_modified": "2017-04-05 03:20",
         "extension_builder_version": "7.6.0",
         "be_user": " (1)"
     }
