@@ -482,6 +482,7 @@ CREATE TABLE tx_bazaar_domain_model_order (
 	pid int(11) DEFAULT '0' NOT NULL,
 
 	date datetime DEFAULT '0000-00-00 00:00:00',
+	description text NOT NULL,
 	invoice_address text NOT NULL,
 	delivery_address text NOT NULL,
 	user int(11) unsigned DEFAULT '0',

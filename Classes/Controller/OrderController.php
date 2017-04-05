@@ -28,17 +28,17 @@ namespace ZECHENDORF\Bazaar\Controller;
  ***************************************************************/
 
 /**
- * InvoiceController
+ * OrderController
  */
-class InvoiceController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
+class OrderController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
 {
   /**
-   * productRepository
+   * orderRepository
    *
-   * @var \ZECHENDORF\Bazaar\Domain\Repository\InvoiceRepository
+   * @var \ZECHENDORF\Bazaar\Domain\Repository\OrderRepository
    * @inject
    */
-  protected $invoiceRepository = NULL;
+  protected $orderRepository = NULL;
   
   /**
    * action list
@@ -48,25 +48,25 @@ class InvoiceController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
   public function listAction()
   {
     if($this->settings['admin_usergroup'] && $GLOBALS['TSFE']->fe_user->groupData['uid'][$this->settings['admin_usergroup']]){
-      // user is in admin group: show all invoices
-      $invoices = $this->invoiceRepository->findAll();
+      // user is in admin group: show all orders
+      $orders = $this->orderRepository->findAll();
     } else {
-      // user is not in admin group: show own invoices
+      // user is not in admin group: show own orders
       
     }
     
     $this->view->assign('settings',$this->settings);
-    $this->view->assign('invoices', $invoices);
+    $this->view->assign('orders', $orders);
   }
 
   /**
    * action show
    *
-   * @param \ZECHENDORF\Bazaar\Domain\Model\Invoice $invoice
+   * @param \ZECHENDORF\Bazaar\Domain\Model\Order $order
    * @return void
    */
-  public function showAction(\ZECHENDORF\Bazaar\Domain\Model\Invoice $invoice)
+  public function showAction(\ZECHENDORF\Bazaar\Domain\Model\Order $order)
   {
-    $this->view->assign('invoice', $invoice);
+    $this->view->assign('order', $order);
   }
 }

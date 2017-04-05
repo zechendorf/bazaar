@@ -23,10 +23,10 @@ return array(
 		'iconfile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath('bazaar') . 'Resources/Public/Icons/tx_bazaar_domain_model_order.gif'
 	),
 	'interface' => array(
-		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, date, invoice_address, delivery_address, user, billing_address_text, delivery_address_text, positions, vouchers, payment_type, shipping_type, shipments, invoices',
+		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, date, description, invoice_address, delivery_address, user, billing_address_text, delivery_address_text, positions, vouchers, payment_type, shipping_type, shipments, invoices',
 	),
 	'types' => array(
-		'1' => array('showitem' => 'sys_language_uid;;;;1-1-1, l10n_parent, l10n_diffsource, hidden;;1, date, invoice_address, delivery_address, user, billing_address_text, delivery_address_text, positions, vouchers, payment_type, shipping_type, shipments, invoices, --div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.access, starttime, endtime'),
+		'1' => array('showitem' => 'sys_language_uid;;;;1-1-1, l10n_parent, l10n_diffsource, hidden;;1, date, description, invoice_address, delivery_address, user, billing_address_text, delivery_address_text, positions, vouchers, payment_type, shipping_type, shipments, invoices, --div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.access, starttime, endtime'),
 	),
 	'palettes' => array(
 		'1' => array('showitem' => ''),
@@ -127,6 +127,16 @@ return array(
 				'checkbox' => 0,
 				'default' => '0000-00-00 00:00:00'
 			),
+		),
+		'description' => array(
+			'exclude' => 1,
+			'label' => 'LLL:EXT:bazaar/Resources/Private/Language/locallang_db.xlf:tx_bazaar_domain_model_invoice.description',
+			'config' => array(
+				'type' => 'text',
+				'cols' => 40,
+				'rows' => 15,
+				'eval' => 'trim'
+			)
 		),
 		'invoice_address' => array(
 			'exclude' => 1,

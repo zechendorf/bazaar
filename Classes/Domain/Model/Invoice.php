@@ -255,4 +255,32 @@ class Invoice extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     }
     return $sum;
   }
+  
+  /**
+   * Returns the taxes
+   *
+   * @return array $taxes
+   */
+  public function getTaxes()
+  {
+    foreach($this->getPositions() as $position){
+      $taxes[$position->getTaxPercent()] += $position->getTaxPercent()*$position->getAmount()*$position->getPrice()/100;
+    }
+    return $taxes;
+  }
+  
+  /**
+   * Returns the total
+   *
+   * @return double $total
+   */
+  public function getTotal()
+  {
+    $taxes = $this->getTaxes();
+    $total = $this->getSum();
+    foreach($taxes as $tax){
+      $total += $tax;
+    }
+    return $total;
+  }
 }

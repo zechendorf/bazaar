@@ -8,6 +8,11 @@ if (!defined('TYPO3_MODE')) {
 	'Invoice',
 	'Invoice'
 );
+\TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
+	'ZECHENDORF.' . $_EXTKEY,
+	'Order',
+	'Order'
+);
 
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile($_EXTKEY, 'Configuration/TypoScript', 'Bazaar');
 

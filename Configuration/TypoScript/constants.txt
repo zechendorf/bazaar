@@ -3,4 +3,9 @@ plugin.tx_bazaar{
     admin_usergroup = 
     date_format = %Y-%m-%d
   }
+  view{
+    layoutRootPath = EXT:bazaar/Resources/Private/Layouts/
+    partialRootPath = EXT:bazaar/Resources/Private/Partials/
+    templateRootPath = EXT:bazaar/Resources/Private/Templates/
+  }
 }
