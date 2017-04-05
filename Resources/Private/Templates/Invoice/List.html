@@ -12,9 +12,10 @@
       <tr>
         <td>{invoice.uid}</td>
         <td><f:format.date format="{settings.date_format}">{invoice.date}</f:format.date></td>
-        <td>{invoice.order.invoiceAddress}</td>
-        <td>Show</td>
+        <td><f:format.nl2br>{invoice.txOrder.invoiceAddress}</f:format.nl2br></td>
+        <td>{invoice.sum} Show</td>
       </tr>
     </f:for>
   </tbody>
 </table>
+<f:debug>{invoices}</f:debug>

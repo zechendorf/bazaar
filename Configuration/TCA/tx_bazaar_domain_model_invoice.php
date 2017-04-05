@@ -23,10 +23,10 @@ return array(
 		'iconfile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath('bazaar') . 'Resources/Public/Icons/tx_bazaar_domain_model_invoice.gif'
 	),
 	'interface' => array(
-		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, date, description, positions, payments',
+		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, order, date, description, positions, payments',
 	),
 	'types' => array(
-		'1' => array('showitem' => 'sys_language_uid;;;;1-1-1, l10n_parent, l10n_diffsource, hidden;;1, date, description, positions, payments, --div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.access, starttime, endtime'),
+		'1' => array('showitem' => 'sys_language_uid;;;;1-1-1, l10n_parent, l10n_diffsource, hidden;;1, order, date, description, positions, payments, --div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.access, starttime, endtime'),
 	),
 	'palettes' => array(
 		'1' => array('showitem' => ''),
@@ -115,7 +115,18 @@ return array(
 				),
 			),
 		),
-
+    
+    'tx_order' => array(
+      'exclude' =>  1,
+      'label' => 'LLL:EXT:bazaar/Resources/Private/Language/locallang_db.xlf:tx_bazaar_domain_model_order',
+      'config' => array(
+				'type' => 'select',
+				'renderType' => 'selectSingle',
+				'foreign_table' => 'tx_bazaar_domain_model_order',
+				'minitems' => 0,
+				'maxitems' => 1,
+			),
+    ),
 		'date' => array(
 			'exclude' => 1,
 			'label' => 'LLL:EXT:bazaar/Resources/Private/Language/locallang_db.xlf:tx_bazaar_domain_model_invoice.date',
