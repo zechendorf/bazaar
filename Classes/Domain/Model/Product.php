@@ -1,6 +1,7 @@
 <?php
 namespace ZECHENDORF\Bazaar\Domain\Model;
 
+
 /***************************************************************
  *
  *  Copyright notice
@@ -86,7 +87,7 @@ class Product extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      *
      * @var float
      */
-    protected $price = false;
+    protected $price = 0.0;
     
     /**
      * description
@@ -139,6 +140,29 @@ class Product extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * @lazy
      */
     protected $volumeDiscounts = null;
+    
+    /**
+     * __construct
+     */
+    public function __construct()
+    {
+        //Do not remove the next line: It would break the functionality
+        $this->initStorageObjects();
+    }
+    
+    /**
+     * Initializes all ObjectStorage properties
+     * Do not modify this method!
+     * It will be rewritten on each save in the extension builder
+     * You may modify the constructor of this class instead
+     *
+     * @return void
+     */
+    protected function initStorageObjects()
+    {
+        $this->productCombinations = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+        $this->volumeDiscounts = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+    }
     
     /**
      * Returns the title
@@ -288,13 +312,24 @@ class Product extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     }
     
     /**
-     * Returns the boolean state of price
+     * Returns the price
      *
-     * @return bool
+     * @return float $price
      */
-    public function isPrice()
+    public function getPrice()
     {
         return $this->price;
+    }
+    
+    /**
+     * Sets the price
+     *
+     * @param float $price
+     * @return void
+     */
+    public function setPrice($price)
+    {
+        $this->price = $price;
     }
     
     /**
@@ -403,29 +438,6 @@ class Product extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     }
     
     /**
-     * __construct
-     */
-    public function __construct()
-    {
-        //Do not remove the next line: It would break the functionality
-        $this->initStorageObjects();
-    }
-    
-    /**
-     * Initializes all ObjectStorage properties
-     * Do not modify this method!
-     * It will be rewritten on each save in the extension builder
-     * You may modify the constructor of this class instead
-     *
-     * @return void
-     */
-    protected function initStorageObjects()
-    {
-        $this->productCombinations = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
-        $this->volumeDiscounts = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
-    }
-    
-    /**
      * Adds a ProductCombination
      *
      * @param \ZECHENDORF\Bazaar\Domain\Model\ProductCombination $productCombination
@@ -466,27 +478,6 @@ class Product extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     public function setProductCombinations(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $productCombinations)
     {
         $this->productCombinations = $productCombinations;
-    }
-    
-    /**
-     * Returns the price
-     *
-     * @return float price
-     */
-    public function getPrice()
-    {
-        return $this->price;
-    }
-    
-    /**
-     * Sets the price
-     *
-     * @param bool $price
-     * @return void
-     */
-    public function setPrice($price)
-    {
-        $this->price = $price;
     }
     
     /**

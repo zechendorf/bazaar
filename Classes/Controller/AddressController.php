@@ -1,6 +1,7 @@
 <?php
 namespace ZECHENDORF\Bazaar\Controller;
 
+
 /***************************************************************
  *
  *  Copyright notice

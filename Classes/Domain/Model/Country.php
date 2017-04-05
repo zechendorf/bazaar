@@ -1,6 +1,7 @@
 <?php
 namespace ZECHENDORF\Bazaar\Domain\Model;
 
+
 /***************************************************************
  *
  *  Copyright notice

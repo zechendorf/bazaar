@@ -1,6 +1,7 @@
 <?php
 namespace ZECHENDORF\Bazaar\Domain\Model;
 
+
 /***************************************************************
  *
  *  Copyright notice
@@ -27,7 +28,7 @@ namespace ZECHENDORF\Bazaar\Domain\Model;
  ***************************************************************/
 
 /**
- * Positions
+ * Position
  */
 class Position extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 {

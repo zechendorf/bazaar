@@ -1,6 +1,7 @@
 <?php
 namespace ZECHENDORF\Bazaar\Domain\Model;
 
+
 /***************************************************************
  *
  *  Copyright notice
@@ -70,7 +71,7 @@ class ProductCombination extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Returns the combinationProduct
      *
-     * @return \ZECHENDORF\Bazaar\Domain\Model\Product combinationProduct
+     * @return \ZECHENDORF\Bazaar\Domain\Model\Product $combinationProduct
      */
     public function getCombinationProduct()
     {

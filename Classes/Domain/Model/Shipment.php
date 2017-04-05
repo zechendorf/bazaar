@@ -1,6 +1,7 @@
 <?php
 namespace ZECHENDORF\Bazaar\Domain\Model;
 
+
 /***************************************************************
  *
  *  Copyright notice
@@ -98,6 +99,27 @@ class Shipment extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     }
     
     /**
+     * Returns the date
+     *
+     * @return \DateTime $date
+     */
+    public function getDate()
+    {
+        return $this->date;
+    }
+    
+    /**
+     * Sets the date
+     *
+     * @param \DateTime $date
+     * @return void
+     */
+    public function setDate(\DateTime $date)
+    {
+        $this->date = $date;
+    }
+    
+    /**
      * Returns the shippingId
      *
      * @return string $shippingId
@@ -116,6 +138,27 @@ class Shipment extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     public function setShippingId($shippingId)
     {
         $this->shippingId = $shippingId;
+    }
+    
+    /**
+     * Returns the trackingUrl
+     *
+     * @return string $trackingUrl
+     */
+    public function getTrackingUrl()
+    {
+        return $this->trackingUrl;
+    }
+    
+    /**
+     * Sets the trackingUrl
+     *
+     * @param string $trackingUrl
+     * @return void
+     */
+    public function setTrackingUrl($trackingUrl)
+    {
+        $this->trackingUrl = $trackingUrl;
     }
     
     /**
@@ -201,48 +244,6 @@ class Shipment extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     public function setPositions(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $positions)
     {
         $this->positions = $positions;
-    }
-    
-    /**
-     * Returns the date
-     *
-     * @return \DateTime $date
-     */
-    public function getDate()
-    {
-        return $this->date;
-    }
-    
-    /**
-     * Sets the date
-     *
-     * @param \DateTime $date
-     * @return void
-     */
-    public function setDate(\DateTime $date)
-    {
-        $this->date = $date;
-    }
-    
-    /**
-     * Returns the trackingUrl
-     *
-     * @return string $trackingUrl
-     */
-    public function getTrackingUrl()
-    {
-        return $this->trackingUrl;
-    }
-    
-    /**
-     * Sets the trackingUrl
-     *
-     * @param string $trackingUrl
-     * @return void
-     */
-    public function setTrackingUrl($trackingUrl)
-    {
-        $this->trackingUrl = $trackingUrl;
     }
 
 }

@@ -1252,8 +1252,8 @@
         {
             "config": {
                 "position": [
-                    84,
-                    449
+                    81,
+                    509
                 ]
             },
             "name": "New Model Object",
@@ -2102,7 +2102,7 @@
         }
     ],
     "log": {
-        "last_modified": "2017-04-05 03:25",
+        "last_modified": "2017-04-05 03:33",
         "extension_builder_version": "7.6.0",
         "be_user": " (1)"
     }

@@ -1,6 +1,7 @@
 <?php
 namespace ZECHENDORF\Bazaar\Domain\Model;
 
+
 /***************************************************************
  *
  *  Copyright notice
@@ -125,6 +126,27 @@ class PaymentType extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     }
     
     /**
+     * Returns the price
+     *
+     * @return float $price
+     */
+    public function getPrice()
+    {
+        return $this->price;
+    }
+    
+    /**
+     * Sets the price
+     *
+     * @param float $price
+     * @return void
+     */
+    public function setPrice($price)
+    {
+        $this->price = $price;
+    }
+    
+    /**
      * Adds a Country
      *
      * @param \ZECHENDORF\Bazaar\Domain\Model\Country $country
@@ -168,24 +190,46 @@ class PaymentType extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     }
     
     /**
-     * Returns the price
+     * Adds a FrontendUserGroup
      *
-     * @return float $price
+     * @param \TYPO3\CMS\Extbase\Domain\Model\FrontendUserGroup $userGroup
+     * @return void
      */
-    public function getPrice()
+    public function addUserGroup(\TYPO3\CMS\Extbase\Domain\Model\FrontendUserGroup $userGroup)
     {
-        return $this->price;
+        $this->userGroups->attach($userGroup);
     }
     
     /**
-     * Sets the price
+     * Removes a FrontendUserGroup
      *
-     * @param float $price
+     * @param \TYPO3\CMS\Extbase\Domain\Model\FrontendUserGroup $userGroupToRemove The FrontendUserGroup to be removed
      * @return void
      */
-    public function setPrice($price)
+    public function removeUserGroup(\TYPO3\CMS\Extbase\Domain\Model\FrontendUserGroup $userGroupToRemove)
     {
-        $this->price = $price;
+        $this->userGroups->detach($userGroupToRemove);
+    }
+    
+    /**
+     * Returns the userGroups
+     *
+     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\TYPO3\CMS\Extbase\Domain\Model\FrontendUserGroup> $userGroups
+     */
+    public function getUserGroups()
+    {
+        return $this->userGroups;
+    }
+    
+    /**
+     * Sets the userGroups
+     *
+     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\TYPO3\CMS\Extbase\Domain\Model\FrontendUserGroup> $userGroups
+     * @return void
+     */
+    public function setUserGroups(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $userGroups)
+    {
+        $this->userGroups = $userGroups;
     }
     
     /**
@@ -250,49 +294,6 @@ class PaymentType extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     public function setDiscounts(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $discounts)
     {
         $this->discounts = $discounts;
-    }
-    
-    /**
-     * Adds a FrontendUser
-     *
-     * @param \TYPO3\CMS\Extbase\Domain\Model\FrontendUserGroup $userGroup
-     * @return void
-     */
-    public function addUserGroup(\TYPO3\CMS\Extbase\Domain\Model\FrontendUserGroup $userGroup)
-    {
-        $this->userGroups->attach($userGroup);
-    }
-    
-    /**
-     * Removes a FrontendUser
-     *
-     * @param \TYPO3\CMS\Extbase\Domain\Model\FrontendUserGroup $userGroupToRemove The FrontendUserGroup to be removed
-     * @return void
-     */
-    public function removeUserGroup(\TYPO3\CMS\Extbase\Domain\Model\FrontendUserGroup $userGroupToRemove)
-    {
-        $this->userGroups->detach($userGroupToRemove);
-    }
-    
-    /**
-     * Returns the userGroups
-     *
-     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\TYPO3\CMS\Extbase\Domain\Model\FrontendUserGroup> userGroups
-     */
-    public function getUserGroups()
-    {
-        return $this->userGroups;
-    }
-    
-    /**
-     * Sets the userGroups
-     *
-     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\TYPO3\CMS\Extbase\Domain\Model\FrontendUserGroup> $userGroups
-     * @return void
-     */
-    public function setUserGroups(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $userGroups)
-    {
-        $this->userGroups = $userGroups;
     }
 
 }

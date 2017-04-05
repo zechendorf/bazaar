@@ -1,6 +1,7 @@
 <?php
 namespace ZECHENDORF\Bazaar\Domain\Model;
 
+
 /***************************************************************
  *
  *  Copyright notice
@@ -119,7 +120,7 @@ class VolumeDiscount extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     }
     
     /**
-     * Adds a FrontendUser
+     * Adds a FrontendUserGroup
      *
      * @param \TYPO3\CMS\Extbase\Domain\Model\FrontendUserGroup $userGroup
      * @return void
@@ -130,7 +131,7 @@ class VolumeDiscount extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     }
     
     /**
-     * Removes a FrontendUser
+     * Removes a FrontendUserGroup
      *
      * @param \TYPO3\CMS\Extbase\Domain\Model\FrontendUserGroup $userGroupToRemove The FrontendUserGroup to be removed
      * @return void
@@ -143,7 +144,7 @@ class VolumeDiscount extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Returns the userGroups
      *
-     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\TYPO3\CMS\Extbase\Domain\Model\FrontendUserGroup> userGroups
+     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\TYPO3\CMS\Extbase\Domain\Model\FrontendUserGroup> $userGroups
      */
     public function getUserGroups()
     {

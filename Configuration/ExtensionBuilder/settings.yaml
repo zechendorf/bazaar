@@ -1,6 +1,6 @@
 #
 # Extension Builder settings for extension bazaar
-# generated 2017-03-28T14:55:00Z
+# generated {f:format.date(format:'Y-m-d\TH:i:00\Z',date:'now')}
 #
 # See http://www.yaml.org/spec/1.2/spec.html
 #
@@ -64,7 +64,7 @@ overwriteSettings:
 #  ext_tables.sql: merge
 
 ## use static date attribute in xliff files ##
-#staticDateInXliffFiles: 2017-03-28T14:55:00Z
+#staticDateInXliffFiles: {f:format.date(format:'Y-m-d\TH:i:00\Z',date:'now')}
 
 ## list of error codes for warnings that should be ignored ##
 #ignoreWarnings:
