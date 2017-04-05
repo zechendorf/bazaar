@@ -47,7 +47,14 @@ class InvoiceController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
    */
   public function listAction()
   {
-    $invoices = $this->invoiceRepository->findAll();
+    if($this->settings['admin_usergroup'] && $GLOBALS['TSFE']->fe_user->groupData['uid'][$this->settings['admin_usergroup']]){
+      // user is in admin group: show all invoices
+      $invoices = $this->invoiceRepository->findAll();
+    } else {
+      // user is not in admin group: show own invoices
+      
+    }
+    
     $this->view->assign('invoices', $invoices);
   }
 

@@ -69,3 +69,6 @@ if (!defined('TYPO3_MODE')) {
     $_EXTKEY,
     'tx_bazaar_domain_model_product'
 );
+
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile($_EXTKEY, 'Configuration/TypoScript', 'bazaar - Template');
+
