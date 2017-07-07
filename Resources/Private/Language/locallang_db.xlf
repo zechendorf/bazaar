@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="messages" date="2017-04-05T15:33:08Z" product-name="bazaar">
+	<file source-language="en" datatype="plaintext" original="messages" date="2017-07-07T10:42:12Z" product-name="bazaar">
 		<header/>
 		<body>
 			<trans-unit id="tx_bazaar_domain_model_paymenttype">
@@ -318,37 +318,37 @@
 			<trans-unit id="tx_bazaar_domain_model_invoice.payments">
 				<source>Payments</source>
 			</trans-unit>
-			<trans-unit id="tx_bazaar_domain_model_transactions">
-				<source>Transactions</source>
+			<trans-unit id="tx_bazaar_domain_model_transaction">
+				<source>Transaction</source>
 			</trans-unit>
-			<trans-unit id="tx_bazaar_domain_model_transactions.transaction_date">
+			<trans-unit id="tx_bazaar_domain_model_transaction.transaction_date">
 				<source>Transaction Date</source>
 			</trans-unit>
-			<trans-unit id="tx_bazaar_domain_model_transactions.valuta_date">
+			<trans-unit id="tx_bazaar_domain_model_transaction.valuta_date">
 				<source>Valuta Date</source>
 			</trans-unit>
-			<trans-unit id="tx_bazaar_domain_model_transactions.debit">
+			<trans-unit id="tx_bazaar_domain_model_transaction.debit">
 				<source>Debit</source>
 			</trans-unit>
-			<trans-unit id="tx_bazaar_domain_model_transactions.credit">
+			<trans-unit id="tx_bazaar_domain_model_transaction.credit">
 				<source>Credit</source>
 			</trans-unit>
-			<trans-unit id="tx_bazaar_domain_model_transactions.description">
+			<trans-unit id="tx_bazaar_domain_model_transaction.description">
 				<source>Description</source>
 			</trans-unit>
-			<trans-unit id="tx_bazaar_domain_model_transactions.transaction_id">
+			<trans-unit id="tx_bazaar_domain_model_transaction.transaction_id">
 				<source>Transaction Id</source>
 			</trans-unit>
-			<trans-unit id="tx_bazaar_domain_model_transactions.sender">
+			<trans-unit id="tx_bazaar_domain_model_transaction.sender">
 				<source>Sender</source>
 			</trans-unit>
-			<trans-unit id="tx_bazaar_domain_model_transactions.recipient">
+			<trans-unit id="tx_bazaar_domain_model_transaction.recipient">
 				<source>Recipient</source>
 			</trans-unit>
-			<trans-unit id="tx_bazaar_domain_model_transactions.identifier">
+			<trans-unit id="tx_bazaar_domain_model_transaction.identifier">
 				<source>Identifier</source>
 			</trans-unit>
-			<trans-unit id="tx_bazaar_domain_model_transactions.payment_type">
+			<trans-unit id="tx_bazaar_domain_model_transaction.payment_type">
 				<source>Payment Type</source>
 			</trans-unit>
 			<trans-unit id="tx_bazaar_domain_model_payment">

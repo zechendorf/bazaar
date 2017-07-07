@@ -1559,7 +1559,7 @@
                     "_default4_delete": false,
                     "customActions": []
                 },
-                "name": "Transactions",
+                "name": "Transaction",
                 "objectsettings": {
                     "addDeletedField": true,
                     "addHiddenField": true,
@@ -2102,7 +2102,7 @@
         }
     ],
     "log": {
-        "last_modified": "2017-04-05 03:33",
+        "last_modified": "2017-07-07 10:42",
         "extension_builder_version": "7.6.0",
         "be_user": " (1)"
     }

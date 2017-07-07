@@ -81,7 +81,7 @@ class PaymentTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
 	/**
 	 * @test
 	 */
-	public function getTransactionReturnsInitialValueForTransactions()
+	public function getTransactionReturnsInitialValueForTransaction()
 	{
 		$this->assertEquals(
 			NULL,
@@ -92,9 +92,9 @@ class PaymentTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
 	/**
 	 * @test
 	 */
-	public function setTransactionForTransactionsSetsTransaction()
+	public function setTransactionForTransactionSetsTransaction()
 	{
-		$transactionFixture = new \ZECHENDORF\Bazaar\Domain\Model\Transactions();
+		$transactionFixture = new \ZECHENDORF\Bazaar\Domain\Model\Transaction();
 		$this->subject->setTransaction($transactionFixture);
 
 		$this->assertAttributeEquals(

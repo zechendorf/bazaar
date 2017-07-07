@@ -1,7 +1,6 @@
 <?php
 namespace ZECHENDORF\Bazaar\Domain\Model;
 
-
 /***************************************************************
  *
  *  Copyright notice
@@ -43,7 +42,7 @@ class Payment extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * transaction
      *
-     * @var \ZECHENDORF\Bazaar\Domain\Model\Transactions
+     * @var \ZECHENDORF\Bazaar\Domain\Model\Transaction
      */
     protected $transaction = null;
     
@@ -71,7 +70,7 @@ class Payment extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Returns the transaction
      *
-     * @return \ZECHENDORF\Bazaar\Domain\Model\Transactions $transaction
+     * @return \ZECHENDORF\Bazaar\Domain\Model\Transaction transaction
      */
     public function getTransaction()
     {
@@ -81,10 +80,10 @@ class Payment extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Sets the transaction
      *
-     * @param \ZECHENDORF\Bazaar\Domain\Model\Transactions $transaction
+     * @param \ZECHENDORF\Bazaar\Domain\Model\Transaction $transaction
      * @return void
      */
-    public function setTransaction(\ZECHENDORF\Bazaar\Domain\Model\Transactions $transaction)
+    public function setTransaction(\ZECHENDORF\Bazaar\Domain\Model\Transaction $transaction)
     {
         $this->transaction = $transaction;
     }

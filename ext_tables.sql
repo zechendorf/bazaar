@@ -710,9 +710,9 @@ CREATE TABLE tx_bazaar_domain_model_invoice (
 );
 
 #
-# Table structure for table 'tx_bazaar_domain_model_transactions'
+# Table structure for table 'tx_bazaar_domain_model_transaction'
 #
-CREATE TABLE tx_bazaar_domain_model_transactions (
+CREATE TABLE tx_bazaar_domain_model_transaction (
 
 	uid int(11) NOT NULL auto_increment,
 	pid int(11) DEFAULT '0' NOT NULL,

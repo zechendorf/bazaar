@@ -53,8 +53,8 @@ if (!defined('TYPO3_MODE')) {
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addLLrefForTCAdescr('tx_bazaar_domain_model_invoice', 'EXT:bazaar/Resources/Private/Language/locallang_csh_tx_bazaar_domain_model_invoice.xlf');
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::allowTableOnStandardPages('tx_bazaar_domain_model_invoice');
 
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addLLrefForTCAdescr('tx_bazaar_domain_model_transactions', 'EXT:bazaar/Resources/Private/Language/locallang_csh_tx_bazaar_domain_model_transactions.xlf');
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::allowTableOnStandardPages('tx_bazaar_domain_model_transactions');
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addLLrefForTCAdescr('tx_bazaar_domain_model_transaction', 'EXT:bazaar/Resources/Private/Language/locallang_csh_tx_bazaar_domain_model_transaction.xlf');
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::allowTableOnStandardPages('tx_bazaar_domain_model_transaction');
 
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addLLrefForTCAdescr('tx_bazaar_domain_model_payment', 'EXT:bazaar/Resources/Private/Language/locallang_csh_tx_bazaar_domain_model_payment.xlf');
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::allowTableOnStandardPages('tx_bazaar_domain_model_payment');

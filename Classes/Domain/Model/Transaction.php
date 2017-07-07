@@ -1,7 +1,6 @@
 <?php
 namespace ZECHENDORF\Bazaar\Domain\Model;
 
-
 /***************************************************************
  *
  *  Copyright notice
@@ -30,7 +29,7 @@ namespace ZECHENDORF\Bazaar\Domain\Model;
 /**
  * Transactions
  */
-class Transactions extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
+class Transaction extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 {
 
     /**
