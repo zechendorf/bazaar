@@ -1,6 +1,7 @@
 <?php
 namespace ZECHENDORF\Bazaar\Domain\Repository;
 
+
 /***************************************************************
  *
  *  Copyright notice
@@ -27,9 +28,9 @@ namespace ZECHENDORF\Bazaar\Domain\Repository;
  ***************************************************************/
 
 /**
- * The repository for PaymentTypes
+ * The repository for Transactions
  */
-class PaymentTypeRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
+class TransactionRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
 {
 
     
