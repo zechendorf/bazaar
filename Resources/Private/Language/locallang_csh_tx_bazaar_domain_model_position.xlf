@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="messages" date="2017-07-07T10:42:12Z" product-name="bazaar">
+	<file source-language="en" datatype="plaintext" original="messages" date="2017-07-07T10:55:49Z" product-name="bazaar">
 		<header/>
 		<body>
 			<trans-unit id="product_title.description">
