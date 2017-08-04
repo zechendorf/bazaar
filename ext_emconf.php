@@ -11,23 +11,23 @@
  ***************************************************************/
 
 $EM_CONF[$_EXTKEY] = array(
-	'title' => 'Bazaar',
-	'description' => 'TYPO3 Online Shop',
-	'category' => 'plugin',
-	'author' => 'Christopher Zechendorf',
-	'author_email' => 'christopher@zechendorf.com',
-	'state' => 'experimental',
-	'internal' => '',
-	'uploadfolder' => '1',
-	'createDirs' => '',
-	'clearCacheOnLoad' => 0,
-	'version' => '0.0.3',
-	'constraints' => array(
-		'depends' => array(
-		),
-		'conflicts' => array(
-		),
-		'suggests' => array(
-		),
-	),
+    'title' => 'Bazaar',
+    'description' => 'TYPO3 Online Shop',
+    'category' => 'plugin',
+    'author' => 'Christopher Zechendorf',
+    'author_email' => 'christopher@zechendorf.com',
+    'state' => 'experimental',
+    'internal' => '',
+    'uploadfolder' => '1',
+    'createDirs' => '',
+    'clearCacheOnLoad' => 0,
+    'version' => '0.2.0',
+    'constraints' => array(
+        'depends' => array(
+        ),
+        'conflicts' => array(
+        ),
+        'suggests' => array(
+        ),
+    ),
 );

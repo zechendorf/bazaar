@@ -1,17 +1,22 @@
 <?php
 if (!defined('TYPO3_MODE')) {
-	die('Access denied.');
+    die('Access denied.');
 }
 
 \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
-	'ZECHENDORF.' . $_EXTKEY,
-	'Invoice',
-	'Invoice'
+    'ZECHENDORF.' . $_EXTKEY,
+    'Invoice',
+    'Invoice'
 );
 \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
-	'ZECHENDORF.' . $_EXTKEY,
-	'Order',
-	'Order'
+    'ZECHENDORF.' . $_EXTKEY,
+    'Product',
+    'Product'
+);
+\TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
+    'ZECHENDORF.' . $_EXTKEY,
+    'Order',
+    'Order'
 );
 
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile($_EXTKEY, 'Configuration/TypoScript', 'Bazaar');

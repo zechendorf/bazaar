@@ -4,16 +4,22 @@ if (!defined('TYPO3_MODE')) {
 }
 
 \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
-	'ZECHENDORF.' . $_EXTKEY,
-	'Invoice',
-	array('Invoice' => 'list, show'),
-	array('Invoice' => 'list, show')
+    'ZECHENDORF.' . $_EXTKEY,
+    'Invoice',
+    array('Invoice' => 'list, show'),
+    array('Invoice' => 'list, show')
 );
 
 
 \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
-	'ZECHENDORF.' . $_EXTKEY,
-	'Order',
-	array('Order' => 'list, show'),
-	array('Order' => 'list, show')
+    'ZECHENDORF.' . $_EXTKEY,
+    'Order',
+    array('Order' => 'list, show'),
+    array('Order' => 'list, show')
+);
+\TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
+    'ZECHENDORF.' . $_EXTKEY,
+    'Product',
+    array('Product' => 'list, show'),
+    array('Product' => 'list, show')
 );

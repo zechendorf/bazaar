@@ -1,0 +1,38 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:ce="http://typo3.org/ns/TYPO3/CMS/FluidStyledContent/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:if condition="{products}">
+    <div class="row">
+        <ul class="team-list sort-destination" data-sort-id="team">
+            <f:for each="{products}" as="product">
+                <li class="col-md-6 col-sm-6 col-xs-12 isotope-item">
+                    <span class="thumb-info thumb-info-hide-wrapper-bg mb-xlg">
+                        <span class="thumb-info-wrapper">
+                            <f:if condition="0">
+                                <f:then>
+                                    <f:link.typolink parameter="{column.media.link}" title="{column.media.title}">
+                                        <f:render section="thumb-info-wrapper" arguments="{_all}" />
+                                    </f:link.typolink>
+                                </f:then>
+                                <f:else>
+                                    <f:render section="thumb-info-wrapper" arguments="{_all}" />
+                                </f:else>
+                            </f:if>
+                        </span>
+                        <f:if condition="{product.description1}">
+                            <span class="thumb-info-caption">
+                                <span class="thumb-info-caption-text"><f:format.stripTags><f:format.html>{product.description1}</f:format.html></f:format.stripTags></span>
+                            </span>
+                        </f:if>
+                    </span>
+                </li>
+            </f:for>
+        </ul>
+    </ul>
+</f:if>
+
+<f:section name="thumb-info-wrapper">
+    <f:image class="img-responsive" src="{product.images.uid}" width="360c" height="360" treatIdAsReference="1" />
+    <span class="thumb-info-title">
+        <span class="thumb-info-inner">{product.title}</span>
+        <span class="thumb-info-type">{product.subTitle}</span>
+    </span>
+</f:section>
