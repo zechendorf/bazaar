@@ -343,6 +343,7 @@ CREATE TABLE tx_bazaar_domain_model_product (
 	uid int(11) NOT NULL auto_increment,
 	pid int(11) DEFAULT '0' NOT NULL,
 
+	main_product int(11) unsigned DEFAULT '0',
 	title varchar(255) DEFAULT '' NOT NULL,
 	type int(11) DEFAULT '0' NOT NULL,
 	page_title varchar(255) DEFAULT '' NOT NULL,

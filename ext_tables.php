@@ -18,6 +18,11 @@ if (!defined('TYPO3_MODE')) {
     'Order',
     'Order'
 );
+\TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
+    'ZECHENDORF.' . $_EXTKEY,
+    'Shop',
+    'Shop'
+);
 
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile($_EXTKEY, 'Configuration/TypoScript', 'Bazaar');
 

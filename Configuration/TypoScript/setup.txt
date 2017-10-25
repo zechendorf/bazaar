@@ -1,11 +1,12 @@
 plugin.tx_bazaar{
   settings{
-    admin_usergroup = {$plugin.tx_bazaar.settings.admin_usergroup}
-    date_format = {$plugin.tx_bazaar.settings.date_format}
-    format_money_decimals = 2
-    format_money_decimal_seperator = ,
-    format_money_thousands_seperator = .
-    format_money_currency = €
+    adminUsergroup = {$plugin.tx_bazaar.settings.admin_usergroup}
+    dateFormat = {$plugin.tx_bazaar.settings.date_format}
+    formatMoneyDecimals = 2
+    formatMoneyDecimal_seperator = ,
+    formatMoneyThousands_seperator = .
+    formatMoneyCurrency = €
+    pidShow =
   }
   view{
     templateRootPaths.0 = {$plugin.tx_bazaar.view.templateRootPath}

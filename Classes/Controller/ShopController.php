@@ -1,5 +1,5 @@
 <?php
-namespace ZECHENDORF\Bazaar\Domain\Repository;
+namespace ZECHENDORF\Bazaar\Controller;
 
 
 /***************************************************************
@@ -28,16 +28,8 @@ namespace ZECHENDORF\Bazaar\Domain\Repository;
  ***************************************************************/
 
 /**
- * The repository for Products
+ * ShopController
  */
-class ProductRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
+class ShopController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
 {
-    public function findAllProducts()
-    {
-        $query = $this->createQuery();
-        $query->matching(
-            $query->lessThan('type',10)
-        );
-        return $query->execute();
-    }
 }

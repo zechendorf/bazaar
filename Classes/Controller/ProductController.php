@@ -40,7 +40,7 @@ class ProductController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
      * @inject
      */
     protected $productRepository = NULL;
-    
+
     /**
      * action list
      *
@@ -48,10 +48,11 @@ class ProductController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
      */
     public function listAction()
     {
-        $products = $this->productRepository->findAll();
+        $products = $this->productRepository->findAllProducts();
+        $this->view->assign('settings', $this->settings);
         $this->view->assign('products', $products);
     }
-    
+
     /**
      * action show
      *
